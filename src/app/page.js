@@ -1,10 +1,14 @@
+import '../../src/app/globals.css'
 import Head from 'next/head'
 import Topbar from "../components/Topbar.jsx"
 import Header from "../components/Header.jsx"
 import Footer from "../components/Footer.jsx"
 import HeroSection from "../app/home/HeroSection.jsx"
-import ServicesSection from "../app/home/ServicesSection.jsx"
+import ServicesSection from "./home/TopServices.jsx"
 import ContactSection from "../app/home/ContactSection.jsx"
+import Testimonials from "../app/home/Testimonial.jsx"
+import HowItWorks from './home/HowItWorks'
+import CTASection from './home/CtaSection'
 
 export default function Home() {
   return (
@@ -19,7 +23,10 @@ export default function Home() {
       <main>
         <HeroSection />
         <ServicesSection />
-        <ContactSection />
+        <HowItWorks />
+        {/* <ContactSection /> */}
+        <Testimonials />
+        {/* <CTASection /> */}
       </main>
       <Footer />
     </>
