@@ -12,8 +12,7 @@ module.exports = {
                 dark: '#212529',
             },
             fontFamily: {
-                heading: ['Poppins', 'sans-serif'],
-                body: ['Inter', 'sans-serif'],
+                heading: ["Arboria", "sans-serif"],
             },
         },
     },

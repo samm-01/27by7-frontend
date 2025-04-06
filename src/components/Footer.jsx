@@ -11,7 +11,7 @@ export default function Footer() {
                 <div className="text-center text-sm text-white">
                     &copy; {new Date().getFullYear()} 27by7. All rights reserved. Built with ❤️ by{" "}
                     <a
-                        href="https://www.linkedin.com/company/infonza-innovations"
+                        href="https://www.infonza.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-400 font-medium hover:underline"

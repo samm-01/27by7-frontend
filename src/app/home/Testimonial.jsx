@@ -50,7 +50,7 @@ export default function Testimonials() {
                                     className="w-14 h-14 rounded-full object-cover"
                                 />
                                 <div>
-                                    <p className="font-semibold text-primary">{t.name}</p>
+                                    <p className="font-semibold text-blue-600">{t.name}</p>
                                     <p className="text-sm text-gray-500">{t.role}</p>
                                 </div>
                             </div>

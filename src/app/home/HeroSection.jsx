@@ -8,7 +8,7 @@ export default function HeroSection() {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
 
                 {/* Text Section */}
-                <div className="md:w-1/2">
+                <div className="md:w-2/5">
                     <h1 className="text-4xl md:text-5xl font-heading text-dark mb-6">
                         Empowering Businesses with Skilled Manpower
                     </h1>

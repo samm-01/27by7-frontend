@@ -3,6 +3,22 @@
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 
+@font-face {
+  font-family: "Arboria";
+  src: url("/fonts/Arboria-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arboria", sans-serif;
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;

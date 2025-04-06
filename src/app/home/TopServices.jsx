@@ -5,19 +5,19 @@ import { FaUsers, FaLaptopCode, FaHeadset } from "react-icons/fa";
 export default function TopServices() {
     const services = [
         {
-            icon: <FaUsers className="text-3xl text-primary" />,
+            icon: <FaUsers className="text-5xl bg-blue-600 text-white p-2 rounded-3xl" />,
             title: "Manpower Outsourcing",
             description:
                 "We provide skilled professionals tailored to your business needs, whether short-term or long-term.",
         },
         {
-            icon: <FaLaptopCode className="text-3xl text-primary" />,
+            icon: <FaLaptopCode className="text-5xl bg-blue-600 text-white p-2 rounded-3xl" />,
             title: "Remote IT Teams",
             description:
                 "Build high-performing remote tech teams with the expertise you need — fast, reliable, and scalable.",
         },
         {
-            icon: <FaHeadset className="text-3xl text-primary" />,
+            icon: <FaHeadset className="text-5xl bg-blue-600 text-white p-2 rounded-3xl" />,
             title: "Customer Support Staffing",
             description:
                 "Deliver exceptional support by outsourcing trained and multilingual support teams 24/7.",

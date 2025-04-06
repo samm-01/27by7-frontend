@@ -1,31 +1,44 @@
 "use client";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
-    const navLinks = ["Home", "About", "Services", "Industries", "Contact"];
+    const navLinks = [
+        // { name: "Home", path: "/" },
+        { name: "About", path: "/about" },
+        { name: "Services", path: "/services" },
+        { name: "Industries", path: "/industries" },
+        { name: "Contact", path: "/contact" },
+    ];
 
     return (
         <header className="bg-white shadow sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-
-                {/* Logo */}
-                <h1 className="text-xl font-bold text-blue-600">27by7</h1>
+                <Link href="/">
+                    <h1 className="text-xl font-bold text-blue-600 cursor-pointer">27by7</h1>
+                </Link>
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-6 text-gray-700 font-medium">
-                    {navLinks.map((item, i) => (
+                    {navLinks.map((link, i) => (
                         <a
                             key={i}
-                            href="#"
-                            className="relative group"
+                            href={link.path}
+                            className={`relative group ${pathname === link.path ? "text-blue-600" : ""
+                                }`}
                         >
-                            <span className="hover:text-primary">{item}</span>
-                            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all group-hover:w-full"></span>
+                            <span className="hover:text-blue-600">{link.name}</span>
+                            <span
+                                className={`absolute left-0 -bottom-1 h-[2px] bg-blue-600 transition-all ${pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
+                                    }`}
+                            ></span>
                         </a>
                     ))}
                     <a
@@ -47,13 +60,14 @@ export default function Header() {
             {/* Mobile Menu */}
             {isOpen && (
                 <div className="md:hidden bg-white px-6 pb-4 space-y-4 shadow">
-                    {navLinks.map((item, i) => (
+                    {navLinks.map((link, i) => (
                         <a
                             key={i}
-                            href="#"
-                            className="block border-b border-gray-200 py-2 text-gray-700 hover:text-primary transition"
+                            href={link.path}
+                            className={`block border-b border-gray-200 py-2 text-gray-700 hover:text-blue-600 transition ${pathname === link.path ? "text-blue-600 font-medium" : ""
+                                }`}
                         >
-                            {item}
+                            {link.name}
                         </a>
                     ))}
                     <a
