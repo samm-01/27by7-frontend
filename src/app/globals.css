@@ -19,6 +19,13 @@ h6 {
   font-family: "Arboria", sans-serif;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 /* :root {
   --background: #ffffff;
   --foreground: #171717;

@@ -3,6 +3,12 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
+import { Audiowide } from 'next/font/google';
+
+const audiowide = Audiowide({
+    weight: '400',
+    subsets: ['latin'],
+});
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +28,9 @@ export default function Header() {
         <header className="bg-white shadow sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
                 <Link href="/">
-                    <h1 className="text-xl font-bold text-blue-600 cursor-pointer">27by7</h1>
+                    <h1 className={`${audiowide.className} text-3xl text-blue-600 tracking-wider cursor-pointer`}>
+                        27By7
+                    </h1>
                 </Link>
 
                 {/* Desktop Nav */}
