@@ -3,6 +3,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 import { Audiowide } from 'next/font/google';
 
 const audiowide = Audiowide({
@@ -17,7 +18,6 @@ export default function Header() {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     const navLinks = [
-        // { name: "Home", path: "/" },
         { name: "About", path: "/about" },
         { name: "Services", path: "/services" },
         { name: "Industries", path: "/industries" },
@@ -26,11 +26,16 @@ export default function Header() {
 
     return (
         <header className="bg-white shadow sticky top-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
                 <Link href="/">
-                    <h1 className={`${audiowide.className} text-3xl text-blue-600 tracking-wider cursor-pointer`}>
-                        27By7
-                    </h1>
+                    <Image
+                        src="/assets/Logo.png"
+                        alt="27By7 Logo"
+                        width={0}
+                        height={0}
+                        sizes="180px"
+                        className="w-auto max-h-12 cursor-pointer"
+                    />
                 </Link>
 
                 {/* Desktop Nav */}
@@ -39,13 +44,11 @@ export default function Header() {
                         <a
                             key={i}
                             href={link.path}
-                            className={`relative group ${pathname === link.path ? "text-blue-600" : ""
-                                }`}
+                            className={`relative group ${pathname === link.path ? "text-blue-600" : ""}`}
                         >
                             <span className="hover:text-blue-600">{link.name}</span>
                             <span
-                                className={`absolute left-0 -bottom-1 h-[2px] bg-blue-600 transition-all ${pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
-                                    }`}
+                                className={`absolute left-0 -bottom-1 h-[2px] bg-blue-600 transition-all ${pathname === link.path ? "w-full" : "w-0 group-hover:w-full"}`}
                             ></span>
                         </a>
                     ))}
@@ -72,8 +75,7 @@ export default function Header() {
                         <a
                             key={i}
                             href={link.path}
-                            className={`block border-b border-gray-200 py-2 text-gray-700 hover:text-blue-600 transition ${pathname === link.path ? "text-blue-600 font-medium" : ""
-                                }`}
+                            className={`block border-b border-gray-200 py-2 text-gray-700 hover:text-blue-600 transition ${pathname === link.path ? "text-blue-600 font-medium" : ""}`}
                         >
                             {link.name}
                         </a>
