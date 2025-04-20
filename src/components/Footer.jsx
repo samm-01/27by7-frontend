@@ -1,12 +1,22 @@
 "use client";
+import Image from "next/image";
 import { FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
     return (
         <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-800 text-white py-6 px-4">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-                {/* Logo or Site Name */}
-                <div className="text-2xl font-bold text-white tracking-wide">27by7</div>
+                {/* Logo Image */}
+                <div className="flex items-center gap-2">
+                    <Image
+                        src="/27by7-footer.jpg" // make sure this is in the /public folder
+                        alt="27by7 Logo"
+                        width={100}
+                        height={100}
+                        className="rounded-full object-cover"
+                    />
+                    {/* <span className="text-2xl font-bold text-white tracking-wide">27by7</span> */}
+                </div>
                 {/* Copyright */}
                 <div className="text-center text-sm text-white">
                     &copy; {new Date().getFullYear()} 27by7. All rights reserved. Built with ❤️ by{" "}

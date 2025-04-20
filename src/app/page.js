@@ -16,7 +16,7 @@ export default function Home() {
       <Head>
         <title>Outsourcing Manpower Solutions</title>
         <meta name="description" content="We provide expert manpower outsourcing solutions to drive your business forward." />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <Topbar />
       <Header />

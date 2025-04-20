@@ -6,20 +6,20 @@ export default function ContactInfo() {
 
             <div className="flex items-center space-x-3">
                 <FaMapMarkerAlt className="text-blue-600 text-xl" />
-                <span className="text-gray-700 font-medium">Mumbai, India</span>
+                <span className="text-gray-700 font-medium">Bangalore, India</span>
             </div>
 
-            <div className="flex items-center space-x-3">
+            {/* <div className="flex items-center space-x-3">
                 <FaPhoneAlt className="text-blue-600 text-xl" />
                 <a href="tel:+911234567890" className="text-gray-700 hover:text-blue-600 transition font-medium">
                     +91 12345 67890
                 </a>
-            </div>
+            </div> */}
 
             <div className="flex items-center space-x-3">
                 <FaEnvelope className="text-blue-600 text-xl" />
                 <a href="mailto:hello@27by7.com" className="text-gray-700 hover:text-blue-600 transition font-medium">
-                    hello@27by7.com
+                    support@27by7.com
                 </a>
             </div>
 
