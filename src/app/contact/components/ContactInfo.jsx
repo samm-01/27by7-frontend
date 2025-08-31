@@ -19,7 +19,7 @@ export default function ContactInfo() {
             <div className="flex items-center space-x-3">
                 <FaEnvelope className="text-blue-600 text-xl" />
                 <a href="mailto:hello@27by7.com" className="text-gray-700 hover:text-blue-600 transition font-medium">
-                    support@27by7.com
+                    reachus@27by7.com
                 </a>
             </div>
 
